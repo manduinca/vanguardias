@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for apps project.
 
@@ -12,6 +13,22 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+from os.path import join, dirname, realpath, basename
+
+import dj_database_url
+
+from apps.core.utils import system
+
+PROJECT_ROOT = realpath(join(dirname(__file__), '../..'))
+PROJECT_DIR = PROJECT_ROOT
+ROOT_PATH = realpath(join(dirname(__file__), '..'))
+SITE_NAME = basename(PROJECT_ROOT)
+
+PROJECT_NAME = system.get_var('VAN_PROJECT_NAME', 'Vanguardias')
+
+VAMGUARDIAS_URL = system.get_var('VAN_SITE_URL', 'https://www.vanguardias.pe')
+SITE_URL = 'https://www.vanguardias.pe'
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,12 +37,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3ecaf)$72ml600x5mhf42*%vq7!bz^bzt&&6zq8yjcc9jlu#9u'
+SECRET_KEY = system.get_var('VAN_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = system.get_var('VAN_DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = system.get_var('VAN_ALLOWED_HOSTS', '*').split()
 
 
 # Application definition
@@ -49,12 +66,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'apps.urls'
+ROOT_URLCONF = 'vanguardias.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(ROOT_PATH, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,17 +84,16 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'apps.wsgi.application'
+WSGI_APPLICATION = 'vanguardias.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(
+        default=system.get_var('VAN_DATABASE_URL'),
+    )
 }
 
 
@@ -103,9 +119,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 

@@ -5,6 +5,7 @@ from django.utils.translation import ugettext as _
 
 WRITER_TYPE = _('writer')
 ADMIN_TYPE = _('admin')
+MEMBER_TYPE = _('member')
 
 RESERVED_WORDS = (
     'about',

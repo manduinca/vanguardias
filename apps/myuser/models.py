@@ -9,12 +9,9 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
-from social.backends.utils import load_backends
 from timezone_field import TimeZoneField
 
-from apps.category.models import Category
-from apps.common.utils import check_url
-from apps.customuser import constants as customuser_constants
+from apps.myuser import constants as myuser_constants
 
 
 class MyUserManager(BaseUserManager):
@@ -56,8 +53,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
         validators = [
             validators.RegexValidator(
                 regex = r'^[a-zA-Z0-9-]{6,}$',
-                message = _('Username must be Alphanumeric
-                    and have how minimum six characters'),
+                message = _('Username must be Alphanumeric and have how minimum six characters'),
                 code = 'invalid_username',
             ),
         ]
@@ -65,7 +61,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(
         max_length = 50,
         unique = True,
-        validators = [validate_email]
+        validators = [validators.validate_email]
     )
     first_name = models.CharField(
         max_length=150,
@@ -135,8 +131,8 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     type = models.IntegerField(
-        choices=customuser_constants.USER_TYPE,
-        default=customuser_constants.MEMBER_TYPE
+        choices=myuser_constants.USER_TYPE,
+        default=myuser_constants.MEMBER_TYPE
     )
     is_organization = models.BooleanField(default=False)
 

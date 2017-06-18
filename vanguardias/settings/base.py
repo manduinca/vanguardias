@@ -47,7 +47,7 @@ ALLOWED_HOSTS = system.get_var('VAN_ALLOWED_HOSTS', '*').split()
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,6 +55,21 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_APPS = [
+    'cities_light',
+    'timezone_field',
+]
+
+LOCAL_APPS = [
+    'apps.myuser',
+    'apps.core',
+    'apps.home',
+    'apps.article',
+    'apps.news',
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -117,8 +132,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # User
 
+AUTH_USER_MODEL = 'myuser.MyUser'
 AUTHENTICATION_BACKENDS = (
-    'apps.customuser.backends.UsernameOrEmailBackend',
+    'apps.myuser.backends.UsernameOrEmailBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 

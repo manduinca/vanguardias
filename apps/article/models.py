@@ -1,9 +1,11 @@
 from django.db import models
+from django.utils import timezone
+from django.utils.translation import ugettext_lazy as _
 
 class Article(models.Model):
     
-    title = model.Charfield(
-        max_lenght=150,
+    title = models.CharField(
+        max_length=150,
     )
     slug = models.CharField(
         max_length=150,

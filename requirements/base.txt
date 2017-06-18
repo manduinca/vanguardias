@@ -1,8 +1,14 @@
 # Web Framework
 Django==1.10.6
 
-# Use Database URLs in your Django Application.
+# Use Database URLs in your Django Application
 dj-database-url==0.4.2
 
 # Postgres driver package
 psycopg2==2.7.1
+
+# Django Timezone
+django-timezone-field==2.0
+
+# Simple alternative to django-cities
+django-cities-light==3.3.0

@@ -1,0 +1,444 @@
+
+.MainMenu {
+
+}
+
+.MainSection {
+	background-image: url('/static/img/home/mainbackground-mobile.png');
+	background-size: cover;
+	background-position: center;
+	min-height: 377px;
+	padding: 96px 0;
+
+	@include break(600px) {
+		background-image: url('/static/img/home/maincover-desktop.jpg');
+	}
+
+	@include break(1024px) {
+		height: 100vh;
+		max-height: 1050px;
+	}
+}
+
+.MainSection__inner {
+
+	@include break(1024px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+}
+
+.MainSection__dateAndAuthor {
+	color: #a5a5a5;
+	font-weight: 400;
+	font-size: 12px;
+	margin-bottom: 26px;
+
+	@include break(1024px) {
+		font-size: 17px;
+	}
+}
+
+.MainSection__date {
+
+}
+
+.MainSection__author {
+	color: #fff;
+}
+
+.MainSection__title {
+	font: 36px "Times New Roman";
+	color: #fff;
+	font-weight: 400;
+	margin-bottom: 26px;
+	max-width: 670px;
+
+	@include break(1024px) {
+		font-size: 70px;
+
+	}
+}
+
+.MainSection__subtitle {
+	font-size: 12px;
+	color: #fff;
+	font-weight: 400;
+
+	@include break(1024px) {
+		font-size: 17px;
+	}
+
+}
+
+.LinksSection {
+
+}
+
+.LinksSection__linksContainer {
+	padding: 21px 0 40px;
+	@include break(500px) {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	@include break(1024px) {
+		padding-bottom: 0;
+	}
+
+	@include break(1600px) {
+		// padding-bottom: 40px;
+	}
+}
+
+.LinksSection__linksGroup {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.LinksSection__label {
+	color: #373737;
+	line-height: 25px;
+	font-size: 12px;
+
+	@include break(550px) {
+		margin: 0 24px;
+	}
+
+	@include break(768px) {
+		font-size: 15px;
+	}
+
+}
+
+.LinksSection__linkItem {
+	color: #373737;
+	line-height: 25px;
+	font-size: 11px;
+	list-style: none;
+
+	@include break(550px) {
+		margin: 0 24px;
+	}
+
+	@include break(768px) {
+		font-size: 15px;
+	}
+}
+
+.ArticlesSection {
+
+	@include break(1024px) {
+		padding: 50px 0;
+	}
+
+	@include break(1600px) {
+		padding: 150px 0;
+	}
+
+	&.extraDesktop {
+		display: none;
+
+		@include break(1024px) {
+			display: block;
+		}
+	}
+
+}
+
+.Article {
+	margin-bottom: 37px;
+
+	@include break(550px){
+		width: 46%;
+	}
+
+	@include break(1024px){
+		width: 22%;
+		margin-bottom: 0;
+	}
+
+}
+
+.Article__cover {
+	display: block;
+	width: 100%;
+	min-height: 200px;
+	height: auto;
+	margin-bottom: 20px;
+	background-size: cover;
+	background-position: center;
+
+	@include break(1366px) {
+		height: 400px;
+	}
+}
+
+.Article__details {
+
+}
+
+.Article__tag {
+	color: #6ac6d3;
+	margin-bottom: 15px;
+}
+
+.Article__title {
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 14px;
+}
+
+.Article__paragraph {
+	color: #606060;
+	font-size: 13px;
+}
+
+.EndingSection {
+	border-top: 1px solid #dfdfdf;
+
+	@include break(1024px) {
+		height: 106px;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.EndingSection__logo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 29px;
+	width: 115px;
+	height: 13px;
+	display: block;
+
+	@include break(1024px) {
+		margin-right: auto;
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+}
+
+.SubscribeForm {
+	max-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include break(1024px) {
+		display: flex;
+		align-items: center;
+		max-width: none;
+		margin-right: 0;
+	}
+}
+
+.EndingSection__logoAndForm {
+
+	@include break(1024px) {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.SubscribeForm__label {
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+
+	@include break(1024px) {
+		font-size: 13px;
+		font-weight: 600;
+		margin-bottom: 0;
+		margin-right: 20px;
+	}
+}
+
+.SubscribeForm__emailInput {
+	width: 100%;
+	display: block;
+	background-color: #fff;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	font-size: 15px;
+	font-style: italic;
+	margin-bottom: 10px;
+	padding: 10px 24px;
+
+	@include break(1024px) {
+		width: 200px;
+		margin-bottom: 0;
+	}
+
+}
+
+.SubscribeForm__button {
+	display: block;
+	width: 100%;
+	height: 44px;
+	background-color: #69c6d7;
+	border-radius: 2px;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+	margin-bottom: 30px;
+
+	@include break(1024px) {
+		width: 116px;
+		margin-bottom: 0;
+		margin-left: 10px;
+	}
+}
+
+.EndingSection__contactLink {
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	color: #303030;
+	cursor: pointer;
+
+	@include break(1024px) {
+		margin-left: 50px;
+	}
+
+}
+
+.ArticlesSection__group {
+	@include break(500px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.HeroArticleSection {
+	display: none;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	max-height: 900px;
+	height: 100vh;
+	width: 100%;
+
+	@include break(1024px) {
+		display: block;
+	}
+
+	@include break(1600px) {
+		margin-bottom: 80px;
+	}
+
+}
+
+.HeroArticle {
+	position: absolute;
+	width: 100%;
+	max-width: 780px;
+	bottom: 146px;
+}
+
+.HeroArticle__author {
+	font-size: 17px;
+	color: #a5a5a5;
+	margin-bottom: 34px;
+}
+
+.HeroArticle__authorName {
+	color: #6ac6d3;
+}
+
+.HeroArticle__title {
+	font: 70px 'Times New Roman';
+	font-weight: 400;
+	line-height: 65px;
+	color: #fff;
+}
+
+.HeroArticle__tag {
+	font-size: 17px;
+	color: #ffffff;
+	margin-bottom: 50px;
+	margin-top: 46px;
+}
+
+.HeroArticle__bottomLine {
+	border-bottom: 1px solid #ffffff;
+	width: 620px;
+}
+
+.SemiHeroArticleSection {
+	display: none;
+	position: relative;
+	@include break(1024px) {
+		display: flex;
+		height: 620px;
+	}
+}
+
+.SemiHeroArticleSection__leftBackground {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+
+	@include break(1366px) {
+		width: 55%;
+	}
+
+	@include break(1440px) {
+		width: 60%;
+	}
+
+}
+
+.SemiHeroArticleSection__backgroundImage {
+	display: block;
+	position: relative;
+	left: -50%;
+
+	@include break(1366px) {
+		left: 0;
+	}
+
+}
+
+.SemiHeroArticle {
+	width: 40%;
+	height: 100%;
+	margin-left: auto;
+	display: flex;
+  flex-direction: column;
+	padding-top: 60px;
+
+	@include break(1366px) {
+		// padding-left: 60px;
+		max-width: 383px;
+	}
+}
+
+.SemiHeroArticle__tag {
+	margin-bottom: 24px;
+	font-size: 14px;
+	color: #6ac6d3;
+}
+
+.SemiHeroArticle__title {
+	font: 40px "Times New Roman";
+	color: #303030;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+.SemiHeroArticle__paragraph {
+	font-size: 16px;
+	color: #606060;
+}

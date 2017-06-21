@@ -1,23 +1,163 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title> VANGUARDIAS </title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.js"/>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-        <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <div class="container-fluid">
-        <p> HOME </p>
-        </div> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<nav class="MainMenu">
+    <img src="" alt="" class="MainMenu__logo">
+</nav>
+
+<section class="MainSection">
+    <div class="MainSection__inner">
+        <div class="container">
+          <div class="MainSection__dateAndAuthor">
+              <span class="MainSection__date">
+              14.01.2017
+            </span> Escrito por
+              <span class="MainSection__author">
+            Dragonofv1
+          </span>
+          </div>
+          <h2 class="MainSection__title">"No mas felixibilizacion laboral"</h2>
+          <h4 class="MainSection__subtitle">El pueblo y la juventud exigen</h4>
+        </div>
+    </div>
+</section>
+
+<div class="LinksSection">
+    <div class="container">
+        <ul class="LinksSection__linksContainer">
+            <div class="LinksSection__linksGroup">
+                <span class="LinksSection__label">Leer mas sobre</span>
+                <li class="LinksSection__linkItem">FANS</li>
+                <li class="LinksSection__linkItem">PROXIMO</li>
+            </div>
+            <div class="LinksSection__linksGroup">
+                <li class="LinksSection__linkItem">RETROSPECTIVA</li>
+                <li class="LinksSection__linkItem">DETRAS DE LA TINTA</li>
+            </div>
+        </ul>
+    </div>
+</div>
+
+<section class="ArticlesSection">
+    <div class="container">
+        <div class="ArticlesSection__group">
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post1.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">FANS</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post2.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">RETROSPECTIVA</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post3.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">DETRAS DE LA TINTA</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post4.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">RETROSPECTIVA</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="SemiHeroArticleSection" >
+  <div class="SemiHeroArticleSection__leftBackground">
+    <img src="{% static 'img/home/semihero1.jpg' %}" alt="" class="SemiHeroArticleSection__backgroundImage">
+  </div>
+  <div class="container">
+    <div class="SemiHeroArticle">
+      <h5 class="SemiHeroArticle__tag">DETRAS DE LA TINTA</h5>
+      <h2 class="SemiHeroArticle__title">"Los obreros de la construccion
+      empujados al margen"</h2>
+      <p class="SemiHeroArticle__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="ArticlesSection extraDesktop">
+    <div class="container">
+        <div class="ArticlesSection__group">
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post1.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">FANS</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post2.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">RETROSPECTIVA</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post3.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">DETRAS DE LA TINTA</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+            <div class="Article">
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post4.png' %}')"></div>
+                <div class="Article__details">
+                    <h4 class="Article__tag">RETROSPECTIVA</h4>
+                    <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
+                    <p class="Article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsum et facere, hic ipsa doloremque, nulla, commodi voluptatem in distinctio inventore dolorem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="HeroArticleSection" style="background-image: url('{% static 'img/home/hero1.jpg' %}')">
+  <div class="container">
+    <div class="HeroArticle">
+      <h5 class="HeroArticle__author">14.01.2017  Escrito por <span class="HeroArticle__authorName">Edward Martínez</span></h5>
+      <h3 class="HeroArticle__title">“La derrota de los derechos laborales en el peru"</h3>
+      <h6 class="HeroArticle__tag">flexibilizacion laboral</h6>
+      <div class="HeroArticle__bottomLine"></div>
+    </div>
+  </div>
+</section>
+<footer class="EndingSection">
+    <div class="container">
+        <div class="EndingSection__logoAndForm">
+          <img src="{% static 'img/home/vanguardia-logo.png' %}" alt="" class="EndingSection__logo">
+          <form action="" class="SubscribeForm">
+              <h4 class="SubscribeForm__label">Suscribete a nuestra edicion mensual</h4>
+              <input type="email" class="SubscribeForm__emailInput" placeholder="Correo electrónico">
+              <button class="SubscribeForm__button" type="submit">Suscríbete</button>
+              <a href="#" class="EndingSection__contactLink">Contacto</a>
+          </form>
+        </div>
+    </div>
+</footer>
+
+{% endblock content %}

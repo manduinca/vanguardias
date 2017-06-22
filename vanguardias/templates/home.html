@@ -5,22 +5,41 @@
     <img src="" alt="" class="MainMenu__logo">
 </nav>
 
-<section class="MainSection">
-    <div class="MainSection__inner">
-        <div class="container">
-          <div class="MainSection__dateAndAuthor">
-              <span class="MainSection__date">
-              14.01.2017
-            </span> Escrito por
-              <span class="MainSection__author">
-            Dragonofv1
-          </span>
+<section class="MainSlider slider">
+  <div class="MainSection">
+      <div class="MainSection__inner">
+          <div class="container">
+            <div class="MainSection__dateAndAuthor">
+                <span class="MainSection__date">
+                14.01.2017
+              </span> Escrito por
+                <span class="MainSection__author">
+              Dragonofv1
+            </span>
+            </div>
+            <h2 class="MainSection__title">"No mas felixibilizacion laboral"</h2>
+            <h4 class="MainSection__subtitle">El pueblo y la juventud exigen</h4>
           </div>
-          <h2 class="MainSection__title">"No mas felixibilizacion laboral"</h2>
-          <h4 class="MainSection__subtitle">El pueblo y la juventud exigen</h4>
-        </div>
-    </div>
+      </div>
+  </div>
+  <div class="MainSection">
+      <div class="MainSection__inner">
+          <div class="container">
+            <div class="MainSection__dateAndAuthor">
+                <span class="MainSection__date">
+                14.01.2017
+              </span> Escrito por
+                <span class="MainSection__author">
+              Dragonofv1
+            </span>
+            </div>
+            <h2 class="MainSection__title">"No mas felixibilizacion laboral"</h2>
+            <h4 class="MainSection__subtitle">El pueblo y la juventud exigen</h4>
+          </div>
+      </div>
+  </div>
 </section>
+
 
 <div class="LinksSection">
     <div class="container">
@@ -159,5 +178,15 @@
         </div>
     </div>
 </footer>
+
+{% block scripts %}
+<script>
+$('.slider').slick({
+  adaptiveHeight: true,
+  autoplay: true,
+  arrows: false,
+});
+</script>
+{% endblock scripts %}
 
 {% endblock content %}

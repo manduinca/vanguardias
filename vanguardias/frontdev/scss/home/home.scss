@@ -3,6 +3,50 @@
 
 }
 
+.MainSlider {
+	position: relative;
+}
+
+.slick-dots {
+	// position: absolute;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	// width: 100%;
+    position: absolute;
+    bottom: 45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+	// bottom: 50px;
+
+	li {
+		display: inline-block;
+		padding: 3px;
+		border-radius: 50%;
+		width: 10px;
+		height: 10px;
+		color: #6ac6d3 !important;
+		background-color: #888888;
+		margin: 0 5px;
+	}
+
+	button {
+		font-size: 0;
+		position: relative;
+		top: -15px;
+	}
+
+}
+//
+.slick-active {
+	background-color: #6ac6d3 !important;
+	color: #6ac6d3;
+}
+
+
 .MainSection {
 	background-image: url('/static/img/home/mainbackground-mobile.png');
 	background-size: cover;
@@ -80,6 +124,7 @@
 
 .LinksSection__linksContainer {
 	padding: 21px 0 40px;
+
 	@include break(500px) {
 		display: flex;
 		justify-content: center;
@@ -99,6 +144,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	&.last {
+		justify-content: flex-start;
+
+		.LinksSection__linkItem {
+			margin-right: 25px;
+		}
+	}
 }
 
 .LinksSection__label {
@@ -106,7 +159,7 @@
 	line-height: 25px;
 	font-size: 12px;
 
-	@include break(550px) {
+	@include break(500px) {
 		margin: 0 24px;
 	}
 
@@ -122,7 +175,7 @@
 	font-size: 11px;
 	list-style: none;
 
-	@include break(550px) {
+	@include break(500px) {
 		margin: 0 24px;
 	}
 
@@ -131,14 +184,28 @@
 	}
 }
 
+.LinksSection__linkIcon {
+	font-size: 5px;
+	position: relative;
+	top: -2px;
+	color: #6ac6d3;
+
+	@include break(768px) {
+		top: -4px;
+	}
+
+}
+
 .ArticlesSection {
+
+	padding-bottom: 80px;
 
 	@include break(1024px) {
 		padding: 50px 0;
 	}
 
 	@include break(1600px) {
-		padding: 150px 0;
+		padding: 100px 0 150px;
 	}
 
 	&.extraDesktop {
@@ -173,10 +240,47 @@
 	margin-bottom: 20px;
 	background-size: cover;
 	background-position: center;
+	position: relative;
 
 	@include break(1366px) {
 		height: 400px;
 	}
+}
+
+.Article__number {
+	position: absolute;
+	bottom: 62px;
+	left: 50%;
+  transform: translate(-20px,0);
+
+	&.blackStyle {
+
+		.Article__square {
+			background-color: #000;
+		}
+
+		.Article__innerNumber {
+			color: #fff;
+		}
+	}
+}
+
+.Article__square {
+	background-color: #fff;
+	padding: 20px;
+	position: absolute;
+	transform: rotate(45deg);
+	border-radius: 3px;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Article__innerNumber {
+	font: 21px 'Times New Roman';
+	font-style: italic;
+	position: absolute;
+	transform: rotate(-45deg);
 }
 
 .Article__details {
@@ -201,6 +305,8 @@
 
 .EndingSection {
 	border-top: 1px solid #dfdfdf;
+	padding-top: 20px;
+	padding-bottom: 40px;
 
 	@include break(1024px) {
 		height: 106px;
@@ -213,8 +319,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 29px;
-	width: 115px;
-	height: 13px;
+	width: 116px;
+	height: 15px;
 	display: block;
 
 	@include break(1024px) {
@@ -269,7 +375,7 @@
 	font-size: 15px;
 	font-style: italic;
 	margin-bottom: 10px;
-	padding: 10px 24px;
+	padding: 10px;
 
 	@include break(1024px) {
 		width: 200px;
@@ -399,6 +505,13 @@
 	}
 
 }
+//
+// .SemiHeroArticleSection__bigNumber {
+// 	position: absolute;
+// 	font: 200px 'Times New Roman';
+// 	color: #dcdcdc;
+// 	right: -50%;
+// }
 
 .SemiHeroArticleSection__backgroundImage {
 	display: block;
@@ -418,6 +531,20 @@
 	display: flex;
   flex-direction: column;
 	padding-top: 60px;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: '5';
+		font: 700px 'Times New Roman';
+		font-style: italic;
+		color: rgba(89, 89, 89, .7);
+		top: 50%;
+		left: -31%;
+		transform: translate(-50%, -50%);
+		line-height: 456px;
+		z-index: 100;
+	}
 
 	@include break(1366px) {
 		// padding-left: 60px;
@@ -429,6 +556,7 @@
 	margin-bottom: 24px;
 	font-size: 14px;
 	color: #6ac6d3;
+	z-index: 110;
 }
 
 .SemiHeroArticle__title {
@@ -436,9 +564,11 @@
 	color: #303030;
 	line-height: 50px;
 	margin-bottom: 20px;
+	z-index: 110;
 }
 
 .SemiHeroArticle__paragraph {
 	font-size: 16px;
 	color: #606060;
+	z-index: 110;
 }

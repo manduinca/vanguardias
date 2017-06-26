@@ -1,0 +1,30 @@
+.Navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 1000;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.Navigation__inner {
+  display: flex;
+  align-items: center;
+}
+
+.Navigation__logo {
+  width: 150px;
+  height: 24px;
+  color: #fff;
+  margin-right: auto;
+}
+
+.Navigation__searchLink {
+  text-decoration: none;
+}
+
+.Navigation__searchIcon {
+  color: #fff;
+  font-size: 16px;
+}

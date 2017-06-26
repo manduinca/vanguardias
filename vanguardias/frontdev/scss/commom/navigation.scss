@@ -1,0 +1,66 @@
+.Navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 1000;
+  width: 100%;
+  padding-top: 20px;
+}
+
+
+.Navigation__inner {
+  display: flex;
+  align-items: center;
+  width: 87%;
+  margin: 0 auto;
+}
+
+.Navigation__logo {
+  width: 150px;
+  height: 24px;
+  color: #fff;
+}
+
+.Navigation__socialNetworks {
+  margin-left: 100px;
+  display: none;
+
+  @include break(1366px) {
+    display: block;
+  }
+}
+
+.Navigation__socialLink {
+  margin-right: 18px;
+  text-decoration: none;
+}
+
+.Navigation__socialIcon {
+  font-size: 18px;
+  color: #fff;
+}
+
+
+
+.Navigation__searchLink {
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.Navigation__searchIcon {
+  color: #fff;
+  font-size: 16px;
+}
+
+.Navigation__searchLabel {
+  font-size: 16px;
+  color: #fff;
+  display: none;
+  font-weight: 300;
+  margin-left: 5px;
+
+  @include break(768px) {
+    display: inline-block;
+  }
+}

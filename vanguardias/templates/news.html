@@ -1,6 +1,94 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block nav %}
+<div class="ArticleNavigation">
+  {% include 'commom/navigation.html' %}
+</div>
+{% endblock nav %}
+
 {% block content %}
-<h1>news</h1>
+<section class="ArticleCover container">
+</section>
+
+<div class="MobileShareArticleLinks">
+  <div class="container">
+    <ul class="ShareNav">
+      <li class="ShareNav__label">COMPARTIR</li>
+      <li class="ShareNav__option"><i class="fa fa-youtube-play"></i></li>
+      <li class="ShareNav__option"><i class="fa fa-twitter"></i></li>
+      <li class="ShareNav__option"><i class="fa fa-instagram"></i></li>
+      <li class="ShareNav__option"><i class="fa fa-facebook-official"></i></li>
+    </ul>
+  </div>
+</div>
+
+<section class="ArticleBody">
+  <div class="container">
+    <div class="ArticleBody__articleAndAuthor">
+      <div class="ArticleBody__content">
+        <h3 class="ArticleBody__tagName">DETRAS DE LA TINTA</h3>
+        <div class="ArticleBody__htmlContent">
+          <!-- Sample article -->
+          <h1 class="ArticleBody__h1">No más flexibilización laboral</h1>
+          <p class="ArticleBody__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          </p>
+          <img src="static/img/article/article-image-1.png" alt="" class="ArticleBody__image">
+          <img src="static/img/article/article-image-2.png" alt="" class="ArticleBody__image">
+          <img src="static/img/article/article-image-3.png" alt="" class="ArticleBody__image">
+          <p class="ArticleBody__p">
+            <i>“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.”</i>
+          </p>
+          <p class="ArticleBody__p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit  aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          </p>
+        </div>
+        <div class="ArticleBody__shareArticleLinks">
+          <ul class="ShareNav">
+            <li class="ShareNav__label">COMPARTIR</li>
+            <li class="ShareNav__option"><i class="fa fa-youtube-play"></i></li>
+            <li class="ShareNav__option"><i class="fa fa-twitter"></i></li>
+            <li class="ShareNav__option"><i class="fa fa-instagram"></i></li>
+            <li class="ShareNav__option"><i class="fa fa-facebook-official"></i></li>
+          </ul>
+        </div>
+      </div>
+      <section class="AuthorSection">
+
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="RelatedArticlesSection">
+  <div class="container">
+    <div class="RelatedArticlesSection__articlesAndHelper">
+      <div class="RelatedArticlesSection__wrapper">
+        <h5 class="RelatedArticlesSection__label">TAMBIEN TE PUEDE INTERESAR</h5>
+        <div class="RelatedArticlesSection__articlesWrapper">
+          <div class="RelatedArticlesSection__Article">
+            <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
+            <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+          </div>
+          <div class="RelatedArticlesSection__Article">
+            <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
+            <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+          </div>
+          <div class="RelatedArticlesSection__Article">
+            <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
+            <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br> augue ut vestibulum</h2>
+          </div>
+        </div>
+      </div>
+      <div class="RelatedArticlesSection__desktopBlankSpaceHelper"></div>
+    </div>
+  </div>
+</section>
+<section class="CommentArea">
+  <div class="container">
+    <h5 class="CommentArea__counter">2 COMENTARIOS</h5>
+  </div>
+</section>
 
 {% endblock content %}

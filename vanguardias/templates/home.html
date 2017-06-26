@@ -5,21 +5,39 @@
     <img src="" alt="" class="MainMenu__logo">
 </nav>
 
-<section class="MainSection">
-    <div class="MainSection__inner">
-        <div class="container">
-          <div class="MainSection__dateAndAuthor">
-              <span class="MainSection__date">
-              14.01.2017
-            </span> Escrito por
-              <span class="MainSection__author">
-            Dragonofv1
-          </span>
+<section class="MainSlider slider">
+  <div class="MainSection">
+      <div class="MainSection__inner">
+          <div class="container">
+            <div class="MainSection__dateAndAuthor">
+                <span class="MainSection__date">
+                14.01.2017
+              </span> Escrito por
+                <span class="MainSection__author">
+              Dragonofv1
+            </span>
+            </div>
+            <h2 class="MainSection__title">"No mas felixibilizacion laboral"</h2>
+            <h4 class="MainSection__subtitle">El pueblo y la juventud exigen</h4>
           </div>
-          <h2 class="MainSection__title">"No mas felixibilizacion laboral"</h2>
-          <h4 class="MainSection__subtitle">El pueblo y la juventud exigen</h4>
-        </div>
-    </div>
+      </div>
+  </div>
+  <div class="MainSection">
+      <div class="MainSection__inner">
+          <div class="container">
+            <div class="MainSection__dateAndAuthor">
+                <span class="MainSection__date">
+                14.01.2017
+              </span> Escrito por
+                <span class="MainSection__author">
+              Dragonofv1
+            </span>
+            </div>
+            <h2 class="MainSection__title">"No mas felixibilizacion laboral"</h2>
+            <h4 class="MainSection__subtitle">El pueblo y la juventud exigen</h4>
+          </div>
+      </div>
+  </div>
 </section>
 
 <div class="LinksSection">
@@ -27,12 +45,12 @@
         <ul class="LinksSection__linksContainer">
             <div class="LinksSection__linksGroup">
                 <span class="LinksSection__label">Leer mas sobre</span>
-                <li class="LinksSection__linkItem">FANS</li>
-                <li class="LinksSection__linkItem">PROXIMO</li>
+                <li class="LinksSection__linkItem"><i class="LinksSection__linkIcon fa fa-circle"></i> FANS</li>
+                <li class="LinksSection__linkItem"><i class="LinksSection__linkIcon fa fa-circle"></i> PROXIMO</li>
             </div>
-            <div class="LinksSection__linksGroup">
-                <li class="LinksSection__linkItem">RETROSPECTIVA</li>
-                <li class="LinksSection__linkItem">DETRAS DE LA TINTA</li>
+            <div class="LinksSection__linksGroup last">
+                <li class="LinksSection__linkItem"><i class="LinksSection__linkIcon fa fa-circle"></i> RETROSPECTIVA</li>
+                <li class="LinksSection__linkItem"><i class="LinksSection__linkIcon fa fa-circle"></i> DETRAS DE LA TINTA</li>
             </div>
         </ul>
     </div>
@@ -42,7 +60,13 @@
     <div class="container">
         <div class="ArticlesSection__group">
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post1.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post1.png' %}')">
+                  <div class="Article__number">
+                    <div class="Article__square">
+                      <span class="Article__innerNumber">1</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">FANS</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -50,7 +74,13 @@
                 </div>
             </div>
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post2.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post2.png' %}')">
+                  <div class="Article__number blackStyle">
+                    <div class="Article__square">
+                      <span class="Article__innerNumber">2</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">RETROSPECTIVA</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -58,7 +88,13 @@
                 </div>
             </div>
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post3.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post3.png' %}')">
+                  <div class="Article__number">
+                    <div class="Article__square">
+                      <span class="Article__innerNumber">3</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">DETRAS DE LA TINTA</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -66,7 +102,13 @@
                 </div>
             </div>
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post4.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post4.png' %}')">
+                  <div class="Article__number blackStyle">
+                    <div class="Article__square">
+                      <span class="Article__innerNumber">4</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">RETROSPECTIVA</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -80,6 +122,7 @@
 <section class="SemiHeroArticleSection" >
   <div class="SemiHeroArticleSection__leftBackground">
     <img src="{% static 'img/home/semihero1.jpg' %}" alt="" class="SemiHeroArticleSection__backgroundImage">
+    <span class="SemiHeroArticleSection__bigNumber">5</span>
   </div>
   <div class="container">
     <div class="SemiHeroArticle">
@@ -101,7 +144,13 @@
     <div class="container">
         <div class="ArticlesSection__group">
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post1.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post1.png' %}')">
+                  <div class="Article__number">
+                    <div class="Article__square">
+                      <span class="Article__innerNumber">6</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">FANS</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -109,7 +158,13 @@
                 </div>
             </div>
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post2.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post2.png' %}')">
+                  <div class="Article__number blackStyle">
+                    <div class="Article__square">
+                      <span class="Article__innerNumber">7</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">RETROSPECTIVA</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -117,7 +172,13 @@
                 </div>
             </div>
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post3.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post3.png' %}')">
+                  <div class="Article__number">
+                    <div class="Article__square">
+                      <span class="Article__innerNumber">8</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">DETRAS DE LA TINTA</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -125,7 +186,13 @@
                 </div>
             </div>
             <div class="Article">
-                <div class="Article__cover" style="background-image: url('{% static 'img/home/post4.png' %}')"></div>
+                <div class="Article__cover" style="background-image: url('{% static 'img/home/post4.png' %}')">
+                  <div class="Article__number">
+                    <div class="Article__square blackStyle">
+                      <span class="Article__innerNumber">9</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="Article__details">
                     <h4 class="Article__tag">RETROSPECTIVA</h4>
                     <h3 class="Article__title">Nullam eu arcu porttitor gravida augueut vestibulum</h3>
@@ -159,5 +226,18 @@
         </div>
     </div>
 </footer>
+
+{% block scripts %}
+<script>
+$(function() {
+  $('.slider').slick({
+    // adaptiveHeight: true,
+    autoplay: true,
+    arrows: false,
+    dots: true,
+  });
+});
+</script>
+{% endblock scripts %}
 
 {% endblock content %}

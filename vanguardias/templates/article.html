@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block nav %}
+<div class="ArticleNavigation">
+  {% include 'commom/navigation.html' %}
+</div>
+{% endblock nav %}
 {% block content %}
-<section class="ArticleCover">
+<section class="ArticleCover container">
 </section>
 
 <div class="MobileShareArticleLinks">

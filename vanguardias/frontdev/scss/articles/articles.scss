@@ -1,12 +1,36 @@
 /*Breakpoints*/
 /* 550, 768, 900*/
 
+.ArticleNavigation {
+
+  .Navigation {
+
+    @include break(1366px) {
+      background-color: #000 !important;
+      padding-bottom: 20px;
+    }
+
+    .Navigation__socialNetworks {
+      display: none !important;
+    }
+  }
+
+}
+
 .ArticleCover {
-  width: 100%;
+  width: 87%;
   height: 377px;
   background-image: url('/static/img/article/article-mobile.jpg');
   background-size: cover;
   background-position: center;
+
+  @include break(1024px) {
+    height: 524px;
+  }
+
+  @include break(1366px) {
+    margin-top: 200px;
+  }
 }
 
 .ArticleCover__mainCover {
@@ -16,7 +40,7 @@
 .MobileShareArticleLinks {
 
   @include break(768px) {
-    display: none;  
+    display: none;
   }
 }
 

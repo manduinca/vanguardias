@@ -46,6 +46,29 @@
 .Navigation__searchLink {
   text-decoration: none;
   margin-left: auto;
+  @include break(768px) {
+    display: none;
+  }
+}
+
+.Navigation__searchForm {
+  display: none;
+  margin-left: auto;
+
+  @include break(768px) {
+    display: flex;
+  }
+}
+
+.Navigation__input {
+  width: 70px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 300;
+  display: block;
+  font-size: 14px;
+  margin-left: 5px;
 }
 
 .Navigation__searchIcon {

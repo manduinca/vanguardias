@@ -59,6 +59,10 @@
   font-size: 13px;
 }
 
+.ShareNav__link {
+  text-decoration: none;
+}
+
 .ShareNav__option {
   margin-right: 25px;
 }
@@ -77,6 +81,10 @@
 .ArticleBody i {
   display: block;
   padding: 0 20px;
+}
+
+.ArticleBody__tagLink {
+  text-decoration: none;
 }
 
 .ArticleBody__tagName {
@@ -175,6 +183,10 @@
   width: 100%;
   height: auto;
   margin-bottom: 19px;
+}
+
+.RelatedArticlesSection__articleLink {
+  text-decoration: none;
 }
 
 .RelatedArticlesSection__articleTitle {

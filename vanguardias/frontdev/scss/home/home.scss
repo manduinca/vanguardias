@@ -89,6 +89,10 @@
 	color: #fff;
 }
 
+.MainSection__titleLink {
+	text-decoration: none;
+}
+
 .MainSection__title {
 	font: 36px "Times New Roman";
 	color: #fff;
@@ -177,6 +181,10 @@
 	@include break(768px) {
 		font-size: 15px;
 	}
+}
+
+.LinksSection__link {
+	text-decoration: none;
 }
 
 .LinksSection__linkIcon {
@@ -285,6 +293,15 @@
 .Article__tag {
 	color: #6ac6d3;
 	margin-bottom: 15px;
+}
+
+.Article__tagLink {
+	text-decoration: none;
+	color: #6ac6d3;
+}
+
+.Article__mainLink {
+	text-decoration: none;
 }
 
 .Article__title {
@@ -457,6 +474,10 @@
 	color: #6ac6d3;
 }
 
+.HeroArticle__mainLink {
+	text-decoration: none;
+}
+
 .HeroArticle__title {
 	font: 70px 'Times New Roman';
 	font-weight: 400;
@@ -547,6 +568,15 @@
 	font-size: 14px;
 	color: #6ac6d3;
 	z-index: 110;
+}
+
+.SemiHeroArticle__link {
+	text-decoration: none;
+	color: #6ac6d3;
+}
+
+.SemiHeroArticle__titleLink {
+	text-decoration: none;
 }
 
 .SemiHeroArticle__title {

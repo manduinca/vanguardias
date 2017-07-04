@@ -327,3 +327,60 @@
   }
 
 }
+
+.TopPosts {
+  display: none;
+
+  @include break(900px) {
+    display: block;
+    padding-top: 60px;
+  }
+}
+
+.TopPosts__label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.TopPosts__group {
+  list-style: none;
+}
+
+.TopPosts__groupPost {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.TopPosts__link {
+  text-decoration: none;
+}
+
+.TopPosts__groupName {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.TopPosts__circleIcon {
+  padding: 0 !important;
+  font-size: 8px;
+  color: #6ac6d3;
+  margin-right: 20px;
+}
+
+.TopPosts__comments {
+  font-size: 12px;
+  color: #6ac6d3;
+  margin-left: 27px;
+}
+
+.TopPosts__banner {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-top: 35px;
+}

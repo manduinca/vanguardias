@@ -61,14 +61,15 @@
 }
 
 .Navigation__input {
-  width: 70px;
+  width: 0;
+  // width: 70px;
   background-color: transparent;
   border: none;
   color: #fff;
   font-weight: 300;
   display: block;
   font-size: 14px;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .Navigation__searchIcon {

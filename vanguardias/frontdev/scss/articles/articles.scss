@@ -5,7 +5,7 @@
 
   .Navigation {
 
-    @include break(1366px) {
+    @include break(768px) {
       background-color: #000 !important;
       padding-bottom: 20px;
     }
@@ -18,11 +18,18 @@
 }
 
 .ArticleCover {
-  width: 87%;
+  width: 100%;
   height: 377px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url('/static/img/article/article-mobile.jpg');
   background-size: cover;
   background-position: center;
+
+  @include break(768px) {
+    width: 87%;
+    margin-top: 80px;
+  }
 
   @include break(1024px) {
     height: 524px;
@@ -59,6 +66,10 @@
   font-size: 13px;
 }
 
+.ShareNav__link {
+  text-decoration: none;
+}
+
 .ShareNav__option {
   margin-right: 25px;
 }
@@ -77,6 +88,10 @@
 .ArticleBody i {
   display: block;
   padding: 0 20px;
+}
+
+.ArticleBody__tagLink {
+  text-decoration: none;
 }
 
 .ArticleBody__tagName {
@@ -118,7 +133,9 @@
 }
 
 .AuthorSection__photo {
-
+  width: 100%;
+  max-width: 280px;
+  height: auto;
 }
 
 .AuthorSection__details {
@@ -177,12 +194,16 @@
   margin-bottom: 19px;
 }
 
+.RelatedArticlesSection__articleLink {
+  text-decoration: none;
+}
+
 .RelatedArticlesSection__articleTitle {
   font: 19px Lora;
 }
 
 .CommentArea {
-
+  padding-top: 50px;
 }
 
 
@@ -314,4 +335,61 @@
     justify-content: flex-end;
   }
 
+}
+
+.TopPosts {
+  display: none;
+
+  @include break(900px) {
+    display: block;
+    padding-top: 60px;
+  }
+}
+
+.TopPosts__label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.TopPosts__group {
+  list-style: none;
+}
+
+.TopPosts__groupPost {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.TopPosts__link {
+  text-decoration: none;
+}
+
+.TopPosts__groupName {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.TopPosts__circleIcon {
+  padding: 0 !important;
+  font-size: 8px;
+  color: #6ac6d3;
+  margin-right: 20px;
+}
+
+.TopPosts__comments {
+  font-size: 12px;
+  color: #6ac6d3;
+  margin-left: 27px;
+}
+
+.TopPosts__banner {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-top: 35px;
 }

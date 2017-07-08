@@ -7,7 +7,7 @@
 </div>
 {% endblock nav %}
 {% block content %}
-<section class="ArticleCover container">
+<section class="ArticleCover">
 </section>
 
 <div class="MobileShareArticleLinks">
@@ -46,10 +46,10 @@
         <div class="ArticleBody__shareArticleLinks">
           <ul class="ShareNav">
             <li class="ShareNav__label">COMPARTIR</li>
-            <li class="ShareNav__option"><i class="fa fa-youtube-play"></i></li>
-            <li class="ShareNav__option"><i class="fa fa-twitter"></i></li>
-            <li class="ShareNav__option"><i class="fa fa-instagram"></i></li>
-            <li class="ShareNav__option"><i class="fa fa-facebook-official"></i></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-youtube-play"></i></a></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-twitter"></i></a></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-instagram"></i></a></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-facebook-official"></i></a></li>
           </ul>
         </div>
       </div>
@@ -66,6 +66,30 @@
             </div>
           </div>
         </div>
+        <div class="TopPosts">
+          <h3 class="TopPosts__label">TOP POSTS</h3>
+          <ul class="TopPosts__group">
+            <li class="TopPosts__groupPost">
+              <a href="#" class="TopPosts__link">
+                <h4 class="TopPosts__groupName"><i class="TopPosts__circleIcon fa fa-circle"></i> Proximamente</h4>
+                <h5 class="TopPosts__comments">24 COMENTARIOS</h5>
+              </a>
+            </li>
+            <li class="TopPosts__groupPost">
+              <a href="#" class="TopPosts__link">
+                <h4 class="TopPosts__groupName"><i class="TopPosts__circleIcon fa fa-circle"></i> Detras de la tinta</h4>
+                <h5 class="TopPosts__comments">19 COMENTARIOS</h5>
+              </a>
+            </li>
+            <li class="TopPosts__groupPost">
+              <a href="#" class="TopPosts__link">
+                <h4 class="TopPosts__groupName"><i class="TopPosts__circleIcon fa fa-circle"></i> Retrospectiva</h4>
+                <h5 class="TopPosts__comments">15 COMENTARIOS</h5>
+              </a>
+            </li>
+          </ul>
+          <img src="https://s3.postimg.org/txqvxbrpf/banner.jpg" alt="" class="TopPosts__banner">
+        </div>
       </section>
     </div>
   </div>
@@ -81,15 +105,21 @@
           <div class="RelatedArticlesSection__articlesWrapper">
             <div class="RelatedArticlesSection__Article">
               <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
-              <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              <a href="#" class="RelatedArticlesSection__articleLink">
+                <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              </a>
             </div>
             <div class="RelatedArticlesSection__Article">
               <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
-              <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              <a href="#" class="RelatedArticlesSection__articleLink">
+                <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              </a>
             </div>
             <div class="RelatedArticlesSection__Article">
               <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
-              <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br> augue ut vestibulum</h2>
+              <a href="#" class="RelatedArticlesSection__articleLink">
+                <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              </a>
             </div>
           </div>
         </div>
@@ -100,7 +130,8 @@
 </section>
 <section class="CommentArea">
   <div class="container">
-    <h5 class="CommentArea__counter">2 COMENTARIOS</h5>
+    <!-- <h5 class="CommentArea__counter">2 COMENTARIOS</h5> -->
+    <div id="disqus_thread"></div>
   </div>
 </section>
 

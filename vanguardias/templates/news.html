@@ -8,17 +8,17 @@
 {% endblock nav %}
 
 {% block content %}
-<section class="ArticleCover container">
+<section class="ArticleCover">
 </section>
 
 <div class="MobileShareArticleLinks">
   <div class="container">
     <ul class="ShareNav">
       <li class="ShareNav__label">COMPARTIR</li>
-      <li class="ShareNav__option"><i class="fa fa-youtube-play"></i></li>
-      <li class="ShareNav__option"><i class="fa fa-twitter"></i></li>
-      <li class="ShareNav__option"><i class="fa fa-instagram"></i></li>
-      <li class="ShareNav__option"><i class="fa fa-facebook-official"></i></li>
+      <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-youtube-play"></i></a></li>
+      <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa twitter"></i></a></li>
+      <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa instagram"></i></a></li>
+      <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa facebook-official"></i></a></li>
     </ul>
   </div>
 </div>
@@ -27,7 +27,9 @@
   <div class="container">
     <div class="ArticleBody__articleAndAuthor">
       <div class="ArticleBody__content News__center">
-        <h3 class="ArticleBody__tagName">DETRAS DE LA TINTA</h3>
+        <a href="#" class="ArticleBody__tagLink">
+          <h3 class="ArticleBody__tagName">DETRAS DE LA TINTA</h3>
+        </a>
         <div class="ArticleBody__htmlContent">
           <!-- Sample article -->
           <h1 class="ArticleBody__h1">No más flexibilización laboral</h1>
@@ -47,10 +49,10 @@
         <div class="ArticleBody__shareArticleLinks">
           <ul class="ShareNav">
             <li class="ShareNav__label">COMPARTIR</li>
-            <li class="ShareNav__option"><i class="fa fa-youtube-play"></i></li>
-            <li class="ShareNav__option"><i class="fa fa-twitter"></i></li>
-            <li class="ShareNav__option"><i class="fa fa-instagram"></i></li>
-            <li class="ShareNav__option"><i class="fa fa-facebook-official"></i></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-youtube-play"></i></a></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-twitter"></i></a></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-instagram"></i></a></li>
+            <li class="ShareNav__option"><a href="#" class="ShareNav__shareLink"><i class="fa fa-facebook-official"></i></a></li>
           </ul>
         </div>
       </div>
@@ -71,15 +73,21 @@
           <div class="RelatedArticlesSection__articlesWrapper">
             <div class="RelatedArticlesSection__Article">
               <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
-              <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              <a href="#" class="RelatedArticlesSection__articleLink">
+                <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              </a>
             </div>
             <div class="RelatedArticlesSection__Article">
               <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
-              <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              <a href="#" class="RelatedArticlesSection__articleLink">
+                <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              </a>
             </div>
             <div class="RelatedArticlesSection__Article">
               <img src="static/img/article/article-cover.png" alt="" class="RelatedArticlesSection__articleCover">
-              <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br> augue ut vestibulum</h2>
+              <a href="#" class="RelatedArticlesSection__articleLink">
+                <h2 class="RelatedArticlesSection__articleTitle">Nullam eu arcu portttitor gravida <br>augue ut vestibulum</h2>
+              </a>
             </div>
         </div>
         </div>
@@ -90,7 +98,8 @@
 </section>
 <section class="CommentArea">
   <div class="container">
-    <h5 class="CommentArea__counter">2 COMENTARIOS</h5>
+    <!-- <h5 class="CommentArea__counter">2 COMENTARIOS</h5> -->
+    <div id="disqus_thread"></div>
   </div>
 </section>
 

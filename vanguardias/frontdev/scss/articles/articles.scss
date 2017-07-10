@@ -330,7 +330,14 @@
     width: 23%;
   }
 
-  .ArticleBody__shareArticleLinks {
+
+
+}
+
+.ArticleBody__shareArticleLinks {
+  display: none;
+
+  @include break(768px) {
     display: flex;
     justify-content: flex-end;
   }

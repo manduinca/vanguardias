@@ -46,18 +46,20 @@
 .Navigation__searchLink {
   text-decoration: none;
   margin-left: auto;
+  display: none;
   @include break(768px) {
     display: none;
   }
 }
 
 .Navigation__searchForm {
-  display: none;
+  // display: none;
+  display: flex;
   margin-left: auto;
 
-  @include break(768px) {
-    display: flex;
-  }
+  // @include break(768px) {
+  //
+  // }
 }
 
 .Navigation__input {

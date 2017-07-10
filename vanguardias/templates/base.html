@@ -35,6 +35,10 @@
     $('.Navigation__input').animate({width: '100px'}, 400);
     $('.Navigation__input').focus();
   });
+
+  $('.Navigation__input').focusout(function() {
+    $('.Navigation__input').animate({width: '0px'}, 400);
+  });
 });
 </script>
     <script>

@@ -5,7 +5,7 @@
 
   .Navigation {
 
-    @include break(1366px) {
+    @include break(768px) {
       background-color: #000 !important;
       padding-bottom: 20px;
     }
@@ -18,11 +18,18 @@
 }
 
 .ArticleCover {
-  width: 87%;
+  width: 100%;
   height: 377px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url('/static/img/article/article-mobile.jpg');
   background-size: cover;
   background-position: center;
+
+  @include break(768px) {
+    width: 87%;
+    margin-top: 80px;
+  }
 
   @include break(1024px) {
     height: 524px;
@@ -126,7 +133,9 @@
 }
 
 .AuthorSection__photo {
-
+  width: 100%;
+  max-width: 280px;
+  height: auto;
 }
 
 .AuthorSection__details {
@@ -194,7 +203,7 @@
 }
 
 .CommentArea {
-
+  padding-top: 50px;
 }
 
 
@@ -321,7 +330,14 @@
     width: 23%;
   }
 
-  .ArticleBody__shareArticleLinks {
+
+
+}
+
+.ArticleBody__shareArticleLinks {
+  display: none;
+
+  @include break(768px) {
     display: flex;
     justify-content: flex-end;
   }

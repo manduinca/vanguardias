@@ -26,7 +26,7 @@ SITE_NAME = basename(PROJECT_ROOT)
 
 PROJECT_NAME = system.get_var('VAN_PROJECT_NAME', 'Vanguardias')
 
-VAMGUARDIAS_URL = system.get_var('VAN_SITE_URL', 'https://www.vanguardias.pe')
+VANGUARDIAS_URL = system.get_var('VAN_SITE_URL', 'https://www.vanguardias.pe')
 SITE_URL = 'https://www.vanguardias.pe'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -155,12 +155,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+STATIC_ROOT = join(PROJECT_ROOT, 'staticfiles')
+
+#STATIC_URL = VANGUARDIAS_URL + 'static/'
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/static/'
-
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static"),
+    os.path.join(ROOT_PATH, "static"),
 ]
-print("holaa")
 print(os.path.join(PROJECT_ROOT, "static"))

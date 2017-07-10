@@ -1,0 +1,7 @@
+-r base.txt
+
+# Gunicorn wsgi http server
+gunicorn==19.7.1
+
+# New Relic Python agent
+newrelic==2.88.0.72
